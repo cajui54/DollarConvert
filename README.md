@@ -1,8 +1,13 @@
-# Getting Started with Create React App
+# Convert Money
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto consiste em uma aplicação, para converter moedas do Real brasileiro para o Dolar americano. À aplicação está conectada ao uma API que atualiza a cada 30 segundos.
 
-## Available Scripts
+## Skills
+### Principais tecnologias usadas no desenvolvimento;
+
+- React.JS,
+- TypeScript
+- Styled-Components
 
 In the project directory, you can run:
 
