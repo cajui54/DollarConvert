@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, MutableRefObject } from 'react';
+import Form from './components/Form/Form';
+import ComboBox from './components/combox/ComboBox';
+import *  as Style from './App.css';
+import ScreenData from './components/Output/ScreenData';
+import useContextOuput from './hooks/useOutputContext';
 
 function App() {
+  const dataOuput = useContextOuput();
+  const refElement = useRef<HTMLDivElement>(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Style.mainApp>
+        <main>
+          <ComboBox/>
+          <Form refElement={refElement}/>
+          <ScreenData refElement={refElement}/>
+        </main>
+      </Style.mainApp>
   );
 }
 
