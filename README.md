@@ -9,6 +9,9 @@ Projeto consiste em uma aplicação, para converter moedas do Real brasileiro pa
 - TypeScript
 - Styled-Components
 
+  
+![USA_Brazil](https://github.com/cajui54/DollarConvert/assets/42698730/ad97c111-cadd-4d5f-8a89-8e44a8b88ce4)
+
 In the project directory, you can run:
 
 ### `npm start`
