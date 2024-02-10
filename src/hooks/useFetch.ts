@@ -4,6 +4,8 @@ const useFetch = () => {
     const url = 'https://economia.awesomeapi.com.br/last/USD-BRL';
     const [datasMoney, setDataMoney] = useState<{} | null>(null);
     const [callFetch, setCallFetch] = useState(true);
+    const weekDay = new Date();
+  
     
     useEffect(() => {
         const requestDatas = async () => {
@@ -25,11 +27,14 @@ const useFetch = () => {
         console.log('render useFetch');
         
     }, [callFetch]);
-
-    setTimeout(() => {
-        setCallFetch(true);
-    }, 30000);
-
+    
+    if(weekDay.getDay() !== 6 && weekDay.getDay() !== 7) {
+        setTimeout(() => {
+            setCallFetch(true);
+            console.log('render useFetch');
+        }, 3000);
+    }
+  
   return {
     currency: datasMoney,
     callFetch,
